@@ -4,6 +4,9 @@ import TodoTask from "./components/TodoTask/TodoTask";
 
 import { ITask } from "./Interfaces";
 
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+
 import './styles/styles.css'
 
 function App() {
@@ -14,10 +17,25 @@ function App() {
 
 	function addTask(): void{
 
+		// if(task ==="") {
+		// 	toast.error("Digite alguma task")
+		// } else {
+		// 	const idRandom = (num: number) => Math.floor(Math.random() * num)
+		
+		// 	const newTask = { id: idRandom(999999999), nameTask: task }
+	
+		// 	setTodoList([...todoList, newTask])
+	
+		// 	toast.success("Task cadastrada com sucesso")
+		// }
+
 		const idRandom = (num: number) => Math.floor(Math.random() * num)
+		
 		const newTask = { id: idRandom(999999999), nameTask: task }
 
 		setTodoList([...todoList, newTask])
+
+		// toast.success("Task cadastrada com sucesso")
 
 	}
 
@@ -27,6 +45,12 @@ function App() {
 
 	return (
 		<div className="App">
+
+			{/* <ToastContainer 
+				autoClose={2500}
+
+				pauseOnHover={false}
+			/> */}
 
 			<header>
 
